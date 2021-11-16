@@ -64,6 +64,8 @@ class ComputeJsAssetSize extends ConsoleCommand
         if (!$noDelete) {
             $this->deleteMergedAssets();
         }
+
+        return 0;
     }
 
     private function ensureThirdPartyPluginsActivated()

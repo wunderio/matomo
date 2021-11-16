@@ -36,6 +36,8 @@ class MigrateTokenAuths extends ConsoleCommand
     {
         self::migrate();
         $output->writeln('Done');
+
+        return 0;
     }
 
     public static function migrate()
