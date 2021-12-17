@@ -13,7 +13,6 @@ use Piwik\Config;
 use Piwik\Date;
 use Piwik\Db;
 use Piwik\Piwik;
-use Piwik\Plugins\Live\Exception\MaxExecutionTimeExceededException;
 use Piwik\Plugins\Live\Model;
 use Piwik\Tests\Framework\Fixture;
 use Piwik\Tests\Framework\Mock\FakeAccess;

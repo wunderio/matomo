@@ -13,7 +13,6 @@ use Piwik\Common;
 use Piwik\Config;
 use Piwik\DataTable;
 use Piwik\DataTable\DataTableInterface;
-use Piwik\DataTable\Simple;
 use Piwik\Http\BadRequestException;
 use Piwik\Metrics;
 use Piwik\Period;
@@ -22,7 +21,6 @@ use Piwik\Piwik;
 use Piwik\Plugin\Report;
 use Piwik\Plugins\API\Filter\DataComparisonFilter\ComparisonRowGenerator;
 use Piwik\Segment;
-use Piwik\Segment\SegmentExpression;
 use Piwik\Site;
 
 /**
