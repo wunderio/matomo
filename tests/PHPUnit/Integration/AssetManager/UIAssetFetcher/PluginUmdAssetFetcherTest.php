@@ -6,7 +6,7 @@
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
-namespace PHPUnit\Integration\AssetManager\UIAssetFetcher;
+namespace Piwik\Tests\Integration\AssetManager\UIAssetFetcher;
 
 use Piwik\AssetManager\UIAsset\OnDiskUIAsset;
 use Piwik\AssetManager\UIAssetFetcher\Chunk;
@@ -15,6 +15,9 @@ use Piwik\Filesystem;
 use Piwik\Plugin\Manager;
 use Piwik\Tests\Framework\TestCase\UnitTestCase;
 
+/**
+ * @backupGlobals enabled
+ */
 class PluginUmdAssetFetcherTest extends UnitTestCase
 {
     const TEST_PLUGINS_DIR = __DIR__ . '/plugins';
