@@ -15,6 +15,7 @@ use Piwik\Container\StaticContainer;
 use Piwik\Cookie;
 use Piwik\Exception\InvalidRequestParameterException;
 use Piwik\Exception\UnexpectedWebsiteFoundException;
+use Piwik\Http;
 use Piwik\IP;
 use Matomo\Network\IPUtils;
 use Piwik\Piwik;
@@ -635,14 +636,8 @@ class Request
 
     public function getClientHints()
     {
-        $default = [];
-
         // use headers as default if no data was send with the tracking request
-        foreach ($_SERVER as $key => $value) {
-            if (0 === strpos(strtolower($key), strtolower('Sec-CH-UA'))) {
-                $default[$key] = $value;
-            }
-        }
+        $default = Http::getClientHintsFromServerVariables();
 
         return Common::getRequestVar('uadata', $default, 'json', $this->params);
     }
