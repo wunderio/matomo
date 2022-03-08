@@ -2990,6 +2990,7 @@ if (typeof window.Matomo !== 'object') {
             function injectClientHints (request, callback) {
                 if (!isDefined(navigatorAlias.userAgentData) || !isDefined(navigatorAlias.userAgentData.getHighEntropyValues)) {
                     callback(request);
+                    return;
                 }
 
                 var appendix = '';
